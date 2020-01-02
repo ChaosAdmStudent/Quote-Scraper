@@ -49,7 +49,7 @@ with open(f'{filepath}\\scraped_quotes.csv','a') as csv_file:
 
     try: 
         for quote,author,topics in zip(quotes,authors,grouped_topics):
-            csv_writer.writerow([quote,author, topics])
+            csv_writer.writerow([quote.text,author.text, topics])
     except Exception as e: 
         pass 
        
